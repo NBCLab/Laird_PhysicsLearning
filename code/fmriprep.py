@@ -58,8 +58,8 @@ def main(argv=None):
 
     if not op.isdir(op.join(args.work_dir, 'dset')):
         os.makedirs(op.join(args.work_dir, 'dset'), exist_ok=True)
-    else:
-        shutil.rmtree(args.work_dir)
+    #else:
+    #    shutil.rmtree(args.work_dir)
 
     if not op.isdir(op.join(args.work_dir, 'dset', args.sub)):
         shutil.copytree(op.join(args.bids_dir, args.sub), op.join(args.work_dir, 'dset', args.sub))
